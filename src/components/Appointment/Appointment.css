@@ -1,0 +1,27 @@
+#input{
+    display: block;
+    height: 40px;
+    padding: 6px 16px 6px 16px ;
+    width: 90%;
+    border: none;
+    font-size: 15px;
+    font-style: bold;
+    background-color: #f3f3f3;
+    margin: 1rem;
+  }
+
+  #_id{
+    display: block;
+    height: 40px;
+    padding: 6px 16px 6px 16px ;
+    width: 90%;
+    border: none;
+    font-size: 15px;
+    font-style: bold;
+    background-color: #f3f3f3;
+    margin: 1rem;
+  }
+
+.Appointmentbody{
+    /* background-color: #f3f3f3 */
+}

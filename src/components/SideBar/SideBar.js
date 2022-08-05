@@ -49,7 +49,7 @@ function SideBar() {
                     <SidebarContent>
                         <Menu iconShape="square">
                             <MenuItem active={path === '/home' ? true : false} icon={<FiHome />}>Home <Link to="/home" /></MenuItem>
-                            <MenuItem active={path === '/result/add' ? true : false} icon={<FiPlus />}>Add Doctor <Link to="/result/add" /></MenuItem>
+                            <MenuItem active={path === '/doctor' ? true : false} icon={<FiPlus />}>Add Doctor <Link to="/doctor" /></MenuItem>
                       
                             {/* <div open={true} style={{ backgroundColor: 'white' }}>
                                 <SubMenu style={{ backgroundColor: 'white' }} active={path === "/superadmin" ? true : false} title="Super Admin" icon={<FaRegHeart />}>
@@ -79,10 +79,10 @@ function SideBar() {
                                     <MenuItem active={path === "/teacher/classlacture" ? true : false} icon={<FiPlus />}>Add classlacture<Link to="/teacher/classlacture" /> </MenuItem>
                                 </SubMenu>
                             </div> */}
-                            <MenuItem active={path === '/superadmin/all' ? true : false} icon={<BsPersonFill />}>Appointment<Link to="/superadmin/all" /></MenuItem>
+                            <MenuItem active={path === '/appointment' ? true : false} icon={<BsPersonFill />}>Appointment<Link to="/appointment" /></MenuItem>
                             <MenuItem active={path === '/parents' ? true : false} icon={<BsPersonFill />}>All User<Link to="/parents" /></MenuItem>
-                            <MenuItem active={path === '/student' ? true : false} icon={<BsPersonFill />}>Dental checkup<Link to="/student" /></MenuItem>
-                            <MenuItem active={path === '/libraian' ? true : false} icon={<BsPersonFill />}>Libraian<Link to="/libraian" /></MenuItem>
+                            <MenuItem active={path === '/dentalcheckup' ? true : false} icon={<BsPersonFill />}>DentalCheckup<Link to="/dentalcheckup" /></MenuItem>
+                            <MenuItem active={path === '/checkup/appointment' ? true : false} icon={<BsPersonFill />}>CheckupAppointment<Link to="/checkup/appointment" /></MenuItem>
                             <MenuItem icon={<RiPencilLine />}>Author</MenuItem>
                             <MenuItem icon={<BiCog />}>Settings</MenuItem>
                         </Menu>

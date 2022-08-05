@@ -9,7 +9,7 @@ import { AddDoctor, GetDoctor } from "../../Redux/AsyncAction/DoctorAction";
 import Moment from 'react-moment';
 import { useNavigate } from "react-router-dom";
 const Doctor = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const doctor = useSelector((state) => state.doctor);
   console.log(doctor);
@@ -35,6 +35,7 @@ const Doctor = () => {
     experience1: "",
     experience2: "",
     experience3: "",
+    img:''
   });
   const handleInputs = (e) => {
     setstate({ ...state, [e.target.name]: e.target.value });
@@ -56,12 +57,12 @@ const Doctor = () => {
         variant="primary"
         onClick={handleShow}
       >
-        Add Teacher
+        Add Doctor
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title> Add Teacher</Modal.Title>
+          <Modal.Title> Add Doctor</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form>
@@ -176,6 +177,14 @@ const Doctor = () => {
               name="experience3"
               placeholder="Experience 3"
             />
+            <input
+              id="input"
+              type="text"
+              value={state.img}
+              onChange={handleInputs}
+              name="img"
+              placeholder="Image Link"
+            />
             {/* <input type="submit">Register</input> */}
           </form>
         </Modal.Body>
@@ -205,7 +214,7 @@ const Doctor = () => {
             </tr>
             {doctor.doctor.length>0?(
             doctor.doctor.map((item,index)=>(
-                  <tr>
+                  <tr key={item._id}>
                   <td data-th="Supplier Code">1</td>
                   <td data-th="Supplier Name">{item.name}</td>
                   <td data-th="Invoice Number">{item.email}</td>
